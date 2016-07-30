@@ -1,0 +1,26 @@
+{{define "section_related-videos/show"}}
+    <!-- related Posts -->
+    <section class="content content-with-sidebar related">
+        <div class="row secBg">
+            <div class="large-12 columns">
+                <div class="main-heading borderBottom">
+                    <div class="row padding-14">
+                        <div class="medium-12 small-12 columns">
+                            <div class="head-title">
+                                <i class="fa fa-film"></i>
+                                <h4>相关资源</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row list-group">
+                    {{range .Result.RelatedVideos}}
+                        {{block "shared/video_card" .}}
+                        {{end}}
+                    {{end}}                
+                </div>
+            </div>
+        </div>
+    </section><!--end related posts-->
+{{end}}
