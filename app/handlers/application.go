@@ -14,6 +14,13 @@ import (
 )
 
 var render *renderx.Render
+var BindResult map[string]map[string]interface{} = map[string]map[string]interface{}{
+	"Result": make(map[string]interface{}),
+}
+
+func AppendResult(key string, result interface{}) {
+	BindResult["Result"][key] = result
+}
 
 func init() {
 	render = renderx.New(renderx.Options{

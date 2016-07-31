@@ -12,6 +12,9 @@ func init() {
 
 	db.DB.AutoMigrate(&models.User{})
 
+	//category
+	db.DB.AutoMigrate(&models.Category{})
+
 	//
 	db.DB.AutoMigrate(&models.Quality{})
 	db.DB.AutoMigrate(&models.Dlink{})

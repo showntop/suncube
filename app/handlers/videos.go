@@ -11,7 +11,14 @@ import (
 )
 
 func IndexVideoHandler(rw http.ResponseWriter, req *http.Request, ps httprouter.Params) {
-	rw.Write([]byte("name"))
+	var videos []models.Video
+
+	db.DB.Find(&videos)
+	// db.DB.Where("category_id =?", ps.ByName("category")).Find(&videos)
+
+	AppendResult("Videos", videos)
+	AppendResult("TitleVides", videos[:5])
+	render.HTML(rw, http.StatusOK, "videos/index", BindResult)
 }
 
 func ShowVideoHandler(rw http.ResponseWriter, req *http.Request, ps httprouter.Params) {

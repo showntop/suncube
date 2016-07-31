@@ -17,6 +17,10 @@ type Video struct {
 	QualityVariations []QualityVariation
 	DlinkVariations   []DlinkVariation
 	ReleaseDate       time.Time
+
+	//
+	Category   Category
+	CategoryID int
 	// Creator     User
 	LikeNum  int
 	WatchNum int

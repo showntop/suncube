@@ -1,0 +1,45 @@
+{{define "section_layerslider-videos/index"}}
+    <!-- caroslider -->
+    <section id="carouselSlider">
+        <div id="owl-demo-slider" class="owl-carousel carousel" data-autoplay="true" data-autoplay-timeout="3000" data-autoplay-hover="true" data-right-to-left="false" data-car-length="4" data-items="4" data-dots="false" data-loop="true" data-merge="true" data-auto-height="true" data-auto-width="false" data-margin="0" data-responsive-medium="2" data-responsive-small="1">
+            {{range $index, $element := .Result.TitleVides }}
+                <div class="item" data-merge="1">
+                    <div class="inner-item">
+                        <img src="http://beetube.me/html-template/images/slider-carousel1.png" alt="images">
+                        <a href="single-video-v1.html" class="hover-posts">
+                            <span><i class="fa fa-play"></i></span>
+                        </a>
+                        <div class="item-title">
+                            <span>Technology</span>
+                            <h6>The standard chunk of Lorem Ipsum used since.</h6>
+                        </div>
+                    </div>                    
+                    <div class="inner-item">
+                        <img src="http://beetube.me/html-template/images/slider-carousel1.png" alt="images">
+                        <a href="single-video-v1.html" class="hover-posts">
+                            <span><i class="fa fa-play"></i></span>
+                        </a>
+                        <div class="item-title">
+                            <span>Technology</span>
+                            <h6>The standard chunk of Lorem Ipsum used since.</h6>
+                        </div>
+                    </div>
+                </div>
+            {{end}}
+            {{$element := index .Result.TitleVides 0}}
+            <div class="item" data-merge="2">
+                <div class="inner-item inner-item-big">
+                    <img src="http://beetube.me/html-template/images/slider-carousel3.png" alt="images">
+                    <a href="single-video-v1.html" class="hover-posts">
+                        <span><i class="fa fa-play"></i></span>
+                    </a>
+                    <div class="item-title">
+                        <span>Technology</span>
+                        <h6>The standard chunk of Lorem Ipsum used since.</h6>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section><!--end slider-->
+{{end}}
